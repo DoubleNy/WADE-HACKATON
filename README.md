@@ -13,13 +13,14 @@ A parsed sheet is an array of rows, where each row is a dict with keys being col
 
 Example: 
 
+
+```
 [] a foaf:Organization ;
     rdf:ID "PA04"^^xsd:string ;
     ns1:atLocation "CLUJ-NAPOCA"^^xsd:string ;
     foaf:homepage "http://www.sapientia.ro/ro/facultati/cluj-napoca"^^xsd:string ;
     foaf:name "Universitatea \"Sapientia\" din Cluj-Napoca"^^xsd:string .
-
-
+```
 Ninicu Cristian\
 *parser\
 *rdf implementation
