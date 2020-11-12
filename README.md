@@ -10,6 +10,12 @@ A parsed sheet is an array of rows, where each row is a dict with keys being col
 
 2. An unsuccessful attempt of creating a fully rdf model from excel file. 
   The created graph contains only university and some attributes. 
+  
+3. A turtle schema using shacl constraints.
+
+4. Generated a PNG representation using ref-grapher.
+
+5. Attempted sparql queries.
 
 Example: 
 
