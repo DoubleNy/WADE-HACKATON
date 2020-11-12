@@ -1,0 +1,274 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+schema:Universitate
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:nume ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:codUniversitate ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:judet ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idJudet ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:localitate ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idLocalitate ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:an ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:adresaWeb ;
+		sh:datatype xsd:string ;
+	].
+schema:Facultate
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:nume ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:universitate ;
+		sh:datatype schema:Universitate ;
+	] ;
+	sh:property [
+		sh:path schema:idUniversitate ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:esteScoalaDoctorala ;
+		sh:datatype xsd:int ;
+		sh:in ( 0  1 ) ;
+	] ;
+	sh:property [
+		sh:path schema:an ;
+		sh:datatype xsd:int ;
+	].
+schema:ProgramStudiu
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:tara ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idTara ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:localitate ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idLocalitate ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:domeniu ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idDomeniu ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:specializare ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idSpecializare ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:tipAcreditare ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idTipAcreditare ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:formaInvatamant ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idFormaInvatamant ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:cicluDeStudii ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idCicluDeStudii ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:limbaPredare ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idLimbaPredare ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:durataStudiu ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:numarCredite ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:an ;
+		sh:datatype xsd:int ;
+	] 
+	.
+schema:Program
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:nume ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:domeniu ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idDomeniu ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:ramuraStiintifica ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:domeniuFundamental ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:cicluDeStudii ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idCicluDeStudii ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:an ;
+		sh:datatype xsd:int ;
+	] 
+	.
+schema:DomeniuStudiu
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:nume ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:domeniuFundamental ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idDomeniuFundamental ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:ramuraStiintifica ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idRamuraStiintifica ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:isLicenta ;
+		sh:datatype xsd:int ;
+		sh:in ( 0  1 ) ;
+	] ;
+	sh:property [
+		sh:path schema:isMaster ;
+		sh:datatype xsd:int ;
+		sh:in ( 0  1 ) ;
+	] ;
+	sh:property [
+		sh:path schema:isDoctorat ;
+		sh:datatype xsd:int ;
+		sh:in ( 0  1 ) ;
+	] ;
+	sh:property [
+		sh:path schema:an ;
+		sh:datatype xsd:int ;
+	] 
+	.
+schema:DomeniuFundamental
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:nume ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:an ;
+		sh:datatype xsd:int ;
+	] 
+	.
+schema:RamuraStiinta
+	a sh:NodeShape;
+	sh:property [
+		sh:path schema:id ;
+		sh:datatype xsd:int ;
+	] ;
+	sh:property [
+		sh:path schema:nume ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:domeniuFundamental ;
+		sh:datatype xsd:string ;
+	] ;
+	sh:property [
+		sh:path schema:idDomeniuFundamental ;
+		sh:datatype xsd:int ;
+	] ;
+	.
