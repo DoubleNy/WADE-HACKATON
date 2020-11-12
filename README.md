@@ -21,12 +21,12 @@ Example:
     foaf:homepage "http://www.sapientia.ro/ro/facultati/cluj-napoca"^^xsd:string ;
     foaf:name "Universitatea \"Sapientia\" din Cluj-Napoca"^^xsd:string .
 ```
-## Ninicu Cristian\
-  - parser\
+## Ninicu Cristian
+  - parser
   - rdf implementation
 
-## Maftei Claudiu Ioan\
- - rdf research\
- - schema\
- - shacl\
+## Maftei Claudiu Ioan
+ - rdf research
+ - schema
+ - shacl
  - queries
