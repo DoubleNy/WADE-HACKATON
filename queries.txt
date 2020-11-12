@@ -1,0 +1,21 @@
+1.
+PREFIX ed: <https://schema.org/EducationalOrganization>
+
+SELECT ?center(COUNT (DISTINCT ?university) as ?Number)
+WHERE {
+  ?university ed:containedInPlace ?center .
+  FILTER (?Number > 4) .
+}
+GROUP BY ?center 
+
+2.
+select DISTINCT ?university
+WHERE {
+	{?universitate domeniuStudiu ?domeniu }
+  union
+  {?domeniu nume "Filologie"}
+}
+
+3.
+
+4.
